@@ -4,7 +4,7 @@
 
 Snap a photo of your menu board. Claude reads it into a catalog, you check it in a table, and you publish. Customers (or their AI assistants) ask questions and order in plain words, and every payment goes straight to the shop's own PayPal account.
 
-- **Live demo:** _add the Render URL here after deploying_ ([try the sample shop](#try-it))
+- **Live demo:** https://chalkboard-oruo.onrender.com ([try the sample shop](#try-it))
 - **Demo video:** _add the YouTube link here_
 - Built for the [PayPal AI Hackathon](https://paypalaihackathon.devpost.com/) · PayPal **sandbox** only · MIT licensed
 
@@ -29,9 +29,9 @@ On the hosted demo (the free Render plan sleeps when idle, so the first load can
 
 | | |
 | --- | --- |
-| Sample shop | `/s/rosas-bakery` |
-| Sample shop's owner dashboard | `/s/rosas-bakery/manage?key=demo` |
-| Make your own shop | `/`, then click **Try a sample menu**, or upload any menu photo |
+| Sample shop | https://chalkboard-oruo.onrender.com/s/rosas-bakery |
+| Sample shop's owner dashboard | https://chalkboard-oruo.onrender.com/s/rosas-bakery/manage?key=demo |
+| Make your own shop | https://chalkboard-oruo.onrender.com, then click **Try a sample menu**, or upload any menu photo |
 
 To pay, you need a **PayPal sandbox Personal (buyer) account**. Sandbox money isn't real.
 
