@@ -9,7 +9,7 @@
     "node": ">=22.18"
   },
   "scripts": {
-    "dev": "node --watch-path=server --env-file-if-exists=.env server/index.ts",
+    "dev": "node --watch --env-file-if-exists=.env server/index.ts",
     "build": "vite build",
     "start": "NODE_ENV=production node --env-file-if-exists=.env server/index.ts",
     "check:payee": "node --env-file-if-exists=.env scripts/check-payee.ts",

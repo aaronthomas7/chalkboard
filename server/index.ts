@@ -167,7 +167,12 @@ if (config.isProduction) {
 } else {
   // In development Vite runs inside this server, so the app, API and PayPal redirects share one port.
   const { createServer } = await import('vite');
-  const vite = await createServer({ server: { middlewareMode: true }, appType: 'spa' });
+  const vite = await createServer({
+    server: { middlewareMode: true },
+    appType: 'spa',
+    // The default loader writes a temp file per start, which retriggers `node --watch` endlessly.
+    configLoader: 'runner',
+  });
   app.use(vite.middlewares);
 }
 

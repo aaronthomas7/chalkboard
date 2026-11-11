@@ -1,5 +1,11 @@
 import { useMemo, useRef, type RefObject } from 'react';
-import type { CellClassParams, CellValueChangedEvent, ColDef, ITooltipParams } from 'ag-grid-community';
+import type {
+  CellClassParams,
+  CellEditingStoppedEvent,
+  CellValueChangedEvent,
+  ColDef,
+  ITooltipParams,
+} from 'ag-grid-community';
 import { AgGridReact, type CustomCellRendererProps } from 'ag-grid-react';
 import type { MenuItem } from '../../shared/types.ts';
 import { formatPrice } from './api.ts';
@@ -78,17 +84,24 @@ export function MenuGrid(props: Props) {
     [currency],
   );
 
-  function handleChange(event: CellValueChangedEvent<MenuItem>) {
-    // Editing a flagged cell counts as the owner confirming it.
-    const field = event.colDef.field ?? event.colDef.colId;
+  // Editing a flagged cell counts as the owner confirming it, even when they keep Claude's value.
+  function confirmEdit(colDef: ColDef<MenuItem>, data: MenuItem) {
+    const field = colDef.field ?? colDef.colId;
     const { items, onChange } = latest.current;
     onChange(
       items.map((item) =>
-        item.id === event.data.id
-          ? { ...event.data, unsure: event.data.unsure.filter((f) => f !== field) }
-          : item,
+        item.id === data.id ? { ...data, unsure: data.unsure.filter((f) => f !== field) } : item,
       ),
     );
+  }
+
+  function handleChange(event: CellValueChangedEvent<MenuItem>) {
+    confirmEdit(event.colDef, event.data);
+  }
+
+  function handleEditingStopped(event: CellEditingStoppedEvent<MenuItem>) {
+    // A changed value was already handled by handleChange.
+    if (!event.valueChanged && event.data) confirmEdit(event.colDef, event.data);
   }
 
   return (
@@ -104,6 +117,7 @@ export function MenuGrid(props: Props) {
       stopEditingWhenCellsLoseFocus
       tooltipShowDelay={150}
       onCellValueChanged={handleChange}
+      onCellEditingStopped={handleEditingStopped}
     />
   );
 }
