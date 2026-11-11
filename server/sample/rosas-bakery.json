@@ -1,0 +1,152 @@
+{
+  "name": "Rosa's Bakery",
+  "currency": "USD",
+  "info": {
+    "hours": "7am – 3pm",
+    "location": "",
+    "notes": [
+      "Baked fresh every morning",
+      "V = vegan, GF = gluten free",
+      "Oat milk +$0.75 on any coffee",
+      "Pre-order for pickup"
+    ]
+  },
+  "items": [
+    {
+      "name": "Butter croissant",
+      "description": "",
+      "category": "Pastries",
+      "price": 3.75,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "butter-croissant"
+    },
+    {
+      "name": "Almond croissant",
+      "description": "",
+      "category": "Pastries",
+      "price": 4.5,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "almond-croissant"
+    },
+    {
+      "name": "Pain au chocolat",
+      "description": "",
+      "category": "Pastries",
+      "price": 4.25,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "pain-au-chocolat"
+    },
+    {
+      "name": "Morning bun",
+      "description": "",
+      "category": "Pastries",
+      "price": 4.8,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "morning-bun"
+    },
+    {
+      "name": "Blueberry muffin",
+      "description": "",
+      "category": "Pastries",
+      "price": 3.95,
+      "tags": [
+        "gluten free"
+      ],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "blueberry-muffin"
+    },
+    {
+      "name": "Country sourdough loaf",
+      "description": "",
+      "category": "Bread",
+      "price": 9,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "country-sourdough-loaf"
+    },
+    {
+      "name": "Seeded rye",
+      "description": "",
+      "category": "Bread",
+      "price": 10,
+      "tags": [
+        "vegan"
+      ],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "seeded-rye"
+    },
+    {
+      "name": "Drip coffee (12 oz)",
+      "description": "",
+      "category": "Coffee",
+      "price": 2.75,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "drip-coffee-12-oz"
+    },
+    {
+      "name": "Drip coffee (16 oz)",
+      "description": "",
+      "category": "Coffee",
+      "price": 3.25,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "drip-coffee-16-oz"
+    },
+    {
+      "name": "Latte (12 oz)",
+      "description": "",
+      "category": "Coffee",
+      "price": 4.25,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "latte-12-oz"
+    },
+    {
+      "name": "Latte (16 oz)",
+      "description": "",
+      "category": "Coffee",
+      "price": 4.95,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "latte-16-oz"
+    },
+    {
+      "name": "Cold brew (12 oz)",
+      "description": "",
+      "category": "Coffee",
+      "price": 4.5,
+      "tags": [],
+      "unsure": [],
+      "note": "",
+      "available": true,
+      "id": "cold-brew-12-oz"
+    }
+  ]
+}

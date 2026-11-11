@@ -1,0 +1,21 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+# Render asks for the values marked `sync: false` when you create the service.
+services:
+  - type: web
+    name: chalkboard
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: SAMPLE_SHOP_PAYPAL_EMAIL
+        sync: false
+      - key: SAMPLE_SHOP_OWNER_KEY
+        value: demo
