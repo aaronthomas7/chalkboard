@@ -1,64 +1,60 @@
-// Narration for each step of the demo. `speech` is read by text-to-speech; `caption` is the subtitle.
+// Narration for each step of the demo, in order. `caption` is the line to read (and the subtitle);
+// `speech` overrides it for the text-to-speech fallback where letters need spelling out.
 export const BEATS = [
   {
     id: 'hook',
     caption:
-      "Ask an AI assistant to order from your local bakery, and it can't. The bakery has a chalkboard, not an online catalog. PayPal is making merchants agent-ready, but that starts from a store that already has a catalog. Chalkboard is the on-ramp for everyone else.",
+      "This is Rosa's bakery, and her whole menu lives on a chalkboard. PayPal is getting merchants ready for AI shoppers, but that starts with an online catalog, and Rosa doesn't have one. Chalkboard gives her one.",
   },
   {
     id: 'who',
-    caption:
-      "Bakeries, food trucks, market stalls. One photo, two minutes, and they're selling through AI, with every payment going to their own PayPal.",
+    caption: 'All Rosa needs is a photo of her board. No website, no spreadsheet, no developer.',
   },
   {
     id: 'read',
     caption:
-      'Claude Opus 5.5 reads the board: items, prices, categories and dietary tags. Every latte size becomes its own item, and V and GF become vegan and gluten free.',
+      'Claude reads the board in seconds: every item and price, each latte size as its own product, and the little V and GF turned into vegan and gluten-free.',
     speech:
-      'Claude Opus 5.5 reads the board: items, prices, categories and dietary tags. Every latte size becomes its own item, and V and G F become vegan and gluten free.',
+      'Claude reads the board in seconds: every item and price, each latte size as its own product, and the little V and G F turned into vegan and gluten-free.',
   },
   {
     id: 'smudge',
-    caption:
-      "When the chalk is smudged, it doesn't guess silently. It flags the cell and says why, and the owner confirms it with one click.",
+    caption: "One price is smudged. Claude doesn't guess. It flags it and says why, and Rosa confirms it with a click.",
   },
   {
     id: 'publish',
-    caption:
-      'The owner adds the PayPal account that should get paid and publishes. The money goes straight to the shop, never through us.',
+    caption: 'She adds her PayPal email and publishes. The money goes straight to her.',
   },
   {
     id: 'soldout',
-    caption: "Sold out of sourdough today? Untick it, and the shop's AI assistant knows right away.",
+    caption: "Out of sourdough today? One click and it's off the menu.",
   },
   {
     id: 'ask',
-    caption: 'Customers, or their AI assistants, just ask. Answers come only from this menu.',
+    caption: "Now a customer, or their AI assistant, just asks. Answers come from Rosa's menu.",
   },
   {
     id: 'sourdough',
-    caption: "It knows what's sold out, and offers an alternative.",
+    caption: "Sourdough's sold out, so it suggests the rye.",
   },
   {
     id: 'order',
     caption:
-      "When the order is clear, it builds the checkout. The AI picks the items, but prices and the total are recalculated on our server from the shop's menu, so a chat can't change what anyone pays.",
+      "They order in plain words, and the assistant builds the checkout. Prices always come from Rosa's menu on our server, never from the chat.",
   },
   {
     id: 'pay',
-    caption:
-      "The customer approves on PayPal's own page. We capture the payment with the PayPal Orders API, using the payee field, so it lands directly in the shop's account.",
+    caption: "They pay on PayPal's own page. One tap, and the PayPal Orders API sends the money directly to Rosa's account.",
   },
   {
     id: 'dashboard',
-    caption:
-      'The owner sees the order live: what was ordered, the pickup time, and exactly what lands in their PayPal after fees.',
+    caption: 'Rosa sees the order right away, with exactly what she receives after fees.',
   },
   {
     id: 'close',
     caption:
-      'Claude for vision and tool use, PayPal for direct-to-merchant payments, and AG Grid for review and orders. Next: an MCP endpoint for every shop, so assistants like Claude can shop them directly. Chalkboard: every small shop, agent-ready.',
+      "Chalkboard uses Claude to read menus and take orders, PayPal to pay each shop directly, and AG Grid for the owner's tools. Next, every shop gets its own MCP endpoint, so any AI assistant can shop there. Chalkboard: every small shop, agent-ready.",
     speech:
-      'Claude for vision and tool use, PayPal for direct-to-merchant payments, and A G Grid for review and orders. Next: an M C P endpoint for every shop, so assistants like Claude can shop them directly. Chalkboard: every small shop, agent-ready.',
+      "Chalkboard uses Claude to read menus and take orders, PayPal to pay each shop directly, and A G Grid for the owner's tools. Next, every shop gets its own M C P endpoint, so any AI assistant can shop there. Chalkboard: every small shop, agent-ready.",
   },
 ];

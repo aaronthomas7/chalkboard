@@ -5,10 +5,12 @@
   "description": "Records the Chalkboard demo in a real browser and assembles the narrated video.",
   "scripts": {
     "record": "PLAYWRIGHT_BROWSERS_PATH=0 node record.mjs",
-    "assemble": "node assemble.mjs"
+    "assemble": "node assemble.mjs",
+    "narrate": "node narrate.mjs"
   },
   "dependencies": {
     "ffmpeg-static": "^5.3.0",
+    "kokoro-js": "^1.2.1",
     "playwright": "^1.65.0"
   }
 }
