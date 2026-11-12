@@ -2,6 +2,8 @@
 
 **From a chalkboard menu to a shop AI assistants can buy from, paid with PayPal.**
 
+![Chalkboard: a photo of Rosa's Bakery's chalkboard menu becomes a live shop where an AI assistant builds a PayPal checkout](docs/images/cover.jpg)
+
 Snap a photo of your menu board. Claude reads it into a catalog, you check it in a table, and you publish. Customers (or their AI assistants) ask questions and order in plain words, and every payment goes straight to the shop's own PayPal account.
 
 - **Live demo:** https://chalkboard-oruo.onrender.com ([try the sample shop](#try-it))
@@ -46,6 +48,10 @@ A good path through the demo:
 4. Watch the order card switch to **Paid**, then open the owner dashboard and see the order and what the shop receives after fees.
 
 ## How it works
+
+![How it works: the shop owner's photo goes to Chalkboard, where Claude reads the menu and takes orders; PayPal's Orders API pays the shop directly; the AI never touches money](docs/images/how-it-works.jpg)
+
+Step by step:
 
 ```mermaid
 sequenceDiagram
